@@ -48,8 +48,8 @@
 
     <module name="TreeWalker">
         <module name="IllegalType">
-            <property name="illegalClassNames" value="int, double, float, boolean, char, byte, short, long"/>
-            <property name="message" value="Entity field doesn't have Primitive Type. use Wrapper class"/>
+            <property name="format" value="int, double, float, boolean, char, byte, short, long"/>
+            <property name="name.illegalType" value="Entity field doesn't have Primitive Type. use Wrapper class"/>
         </module>
         <module name="OuterTypeFilename"/>
         <module name="IllegalTokenText">
