@@ -327,7 +327,7 @@
         <!-- https://checkstyle.org/config_filters.html#SuppressionXpathFilter -->
         <module name="SuppressionXpathFilter">
             <property name="fileNamePattern" value=".*\.java"/>
-            <property name="messagePattern" value="JPA Entity 필드에는 Primitive Type을 사용할 수 없습니다"/>
+            <property name="messagePattern" value="Entity field doesn't have Primitive Type. use Wrapper class"/>
             <property name="query" value="//CLASS_DEF[./ANNOTATIONS/ANNOTATION[IDENT[@text='Entity']]]"/>
             <property name="file" value="${org.checkstyle.google.suppressionxpathfilter.config}"
                       default="checkstyle-xpath-suppressions.xml"/>
