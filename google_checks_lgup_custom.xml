@@ -49,7 +49,7 @@
     <module name="TreeWalker">
         <module name="IllegalType">
             <property name="illegalClassNames" value="int, double, float, boolean, char, byte, short, long"/>
-            <property name="message" value="JPA Entity 필드에는 Primitive Type을 사용할 수 없습니다. 대신 Wrapper 클래스(ex. Integer)를 사용하세요."/>
+            <property name="message" value="Entity field doesn't have Primitive Type. use Wrapper class"/>
         </module>
         <module name="OuterTypeFilename"/>
         <module name="IllegalTokenText">
