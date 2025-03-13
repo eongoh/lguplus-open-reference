@@ -4,4 +4,6 @@
 <suppressions>
     <!-- src/test 디렉토리에서는 _ 검출 제외 -->
     <suppress checks="[^_]+" files=".*src/test/.*" />
+    <suppress-xpath checks="IllegalType"
+                    query="//CLASS_DEF[./ANNOTATION[./IDENT[@text='Entity']]]"/>
 </suppressions>
