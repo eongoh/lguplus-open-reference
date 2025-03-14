@@ -13,6 +13,6 @@
 <!--        <property name="checks" value="IllegalType" />-->
 <!--    </module>-->
 <!--    <suppress checks="IllegalTyle" files=".domain/src/main/java/com/lguplus/fleta/data/entity/*"></suppress>-->
-    <suppress checks="IllegalTyle" files="*/entity/*"></suppress>
+    <suppress checks="IllegalTyle" files=".*/entity/.*"></suppress>
 
 </suppressions>
