@@ -7,9 +7,9 @@
 
     <!-- @Entity 아닌 파일들은 IllegalType 검출 제외 -->
     <module name="SuppressionXpathFilter">
-<!--        <property name="query" value="//CLASS_DEF[./MODIFIERS/ANNOTATION/IDENT[@text='Entity']]" />-->
+        <property name="query" value="//CLASS_DEF[./MODIFIERS/ANNOTATION/IDENT[@text='Entity']]" />
 <!--        <property name="query" value="//CLASS_DEF[not(./MODIFIERS/ANNOTATION/IDENT[@text='Entity'])]" />-->
-        <property name="query" value="//CLASS_DEF[(./MODIFIERS/ANNOTATION/IDENT[@text='Entity'])]" />
+<!--        <property name="query" value="//CLASS_DEF[(./MODIFIERS/ANNOTATION/IDENT[@text='Entity'])]" />-->
         <property name="checks" value="IllegalType" />
     </module>
 
