@@ -12,5 +12,10 @@
 <!--        <property name="files" value=".*/domain/src/main/java/com/lguplus/fleta/data/entity/*" />-->
 <!--        <property name="checks" value="IllegalType" />-->
 <!--    </module>-->
+    <module name="SuppressionXpathFilter">
+        <property name="query" value="//CLASS_DEF[./MODIFIERS/ANNOTATION/IDENT[@text='Entity']]" />
+        <property name="checks" value="IllegalType" />
+    </module>
+
 
 </suppressions>
