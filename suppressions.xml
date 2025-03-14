@@ -6,9 +6,10 @@
     <suppress checks="[^_]+" files=".*src/test/.*" />
 <!--    <suppress-xpath checks="IllegalType"-->
 <!--                    query="//CLASS_DEF[./ANNOTATION[./AT[@text='@'][./IDENT[@text='Entity']]]]"/>-->
-    <module name="IllegalType">
+<!--    <module name="IllegalType">-->
 <!--        <property name="query" value="//CLASS_DEF[./ANNOTATION[./AT[@text='@'][./IDENT[@text='Entity']]]]" />-->
-        <property name="files" value=".*/domain/src/main/java/com/lguplus/fleta/data/entity/*" />
-        <property name="checks" value="IllegalType" />
-    </module>
+<!--        <property name="files" value=".*/domain/src/main/java/com/lguplus/fleta/data/entity/*" />-->
+<!--        <property name="checks" value="IllegalType" />-->
+<!--    </module>-->
+    <suppress checks="IllegalTyle" files=".domain/src/main/java/com/lguplus/fleta/data/entity/*"></suppress>
 </suppressions>
