@@ -49,6 +49,7 @@
     <module name="TreeWalker">
         <module name="IllegalType">
             <property name="illegalClassNames" value="int, double, float, boolean, char, byte, short, long"/>
+            <property name="files" value=".*/entity/.*" />
 <!--            <property name="query" value="//CLASS_DEF[not(./MODIFIERS/ANNOTATION/IDENT[@text='Entity'])]"/>-->
 <!--            <property name="query" value="//CLASS_DEF[./MODIFIERS/ANNOTATION/IDENT[@text='Entity']]"/>-->
         </module>

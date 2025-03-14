@@ -6,6 +6,6 @@
     <suppress checks="[^_]+" files=".*src/test/.*" />
 
 <!--    <suppress checks="IllegalType" files="^(?!.*\/entity\/).*" />-->
-    <suppress checks="IllegalType" files="^(.*/entity/.*).*" />
+<!--    <suppress checks="IllegalType" files="^(.*/entity/.*).*" />-->
 
 </suppressions>
