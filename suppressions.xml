@@ -5,10 +5,4 @@
     <!-- src/test 디렉토리에서는 _ 검출 제외 -->
     <suppress checks="[^_]+" files=".*src/test/.*" />
 
-    <!-- @Entity 아닌 파일들은 IllegalType 검출 제외 -->
-<!--    all successful 어이 없을 무 -->
-<!--    <suppress checks="IllegalType"  query="//CLASS_DEF[not(./MODIFIERS/ANNOTATION/IDENT[@text='Entity'])]" />-->
-    <suppress checks="IllegalType"  query="//CLASS_DEF[./MODIFIERS/ANNOTATION/IDENT[@text='Entity']]" />
-
-
 </suppressions>
