@@ -7,8 +7,8 @@
 
 <!--    <suppress checks="IllegalType" files="^(?!.*\/entity\/).*" />-->
 <!--    <suppress checks="IllegalType" files="^(.*/entity/.*).*" />-->
-    <suppress
-            checks="IllegalType"
+    <suppress-xpath
+            checks="/*"
             query="//CLASS_DEF[not(./ANNOTATION[./IDENT[@text='Table']])]"
     />
 
