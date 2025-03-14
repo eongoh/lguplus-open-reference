@@ -5,17 +5,11 @@
     <!-- src/test 디렉토리에서는 _ 검출 제외 -->
     <suppress checks="[^_]+" files=".*src/test/.*" />
 
-<!--    <suppress-xpath checks="IllegalType" query="//CLASS_DEF[./ANNOTATION[./AT[@text='@'][./IDENT[@text='Entity']]]]"/>-->
-<!--    <module name="IllegalType">-->
-<!--        <property name="query" value="//CLASS_DEF[./ANNOTATION[./AT[@text='@'][./IDENT[@text='Entity']]]]" />-->
-<!--        <property name="query" value="//CLASS_DEF[not(./MODIFIERS/ANNOTATION/IDENT[@text='Entity'])]" />-->
-<!--        <property name="files" value=".*/domain/src/main/java/com/lguplus/fleta/data/entity/*" />-->
-<!--        <property name="checks" value="IllegalType" />-->
-<!--    </module>-->
+    <!-- @Entity 아닌 파일들은 IllegalType 검출 제외 -->
     <module name="SuppressionXpathFilter">
-        <property name="query" value="//CLASS_DEF[./MODIFIERS/ANNOTATION/IDENT[@text='Entity']]" />
+<!--        <property name="query" value="//CLASS_DEF[./MODIFIERS/ANNOTATION/IDENT[@text='Entity']]" />-->
+        <property name="query" value="//CLASS_DEF[not(./MODIFIERS/ANNOTATION/IDENT[@text='Entity'])]" />
         <property name="checks" value="IllegalType" />
     </module>
-
 
 </suppressions>
