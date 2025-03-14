@@ -4,5 +4,8 @@
 <suppressions>
     <!-- src/test 디렉토리에서는 _ 검출 제외 -->
     <suppress checks="[^_]+" files=".*src/test/.*" />
-
+    <module name="IllegalType">
+        <property name="files" value=".*/entity/.*" />
+        <property name="checks" value="IllegalType" />
+    </module>
 </suppressions>
