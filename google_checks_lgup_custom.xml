@@ -328,6 +328,26 @@
             <property name="file" value="${org.checkstyle.google.suppressionxpathfilter.config}"
                       default="checkstyle-xpath-suppressions.xml"/>
             <property name="optional" value="true"/>
+            <!-- @Id 어노테이션이 붙은 필드(멤버 변수)의 IllegalType 검사 제외 -->
+            <suppress-xpath>
+                <checks>IllegalType</checks>
+                <query>//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]</query>
+            </suppress-xpath>
+            <!-- @Id 어노테이션이 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
+            <suppress-xpath>
+                <checks>IllegalType</checks>
+                <query>//PARAMETER_DEF[preceding-sibling::ANNOTATION[@text='Id']]</query>
+            </suppress-xpath>
+            <!-- final 키워드가 붙은 필드(멤버 변수)의 IllegalType 검사 제외 -->
+            <suppress-xpath>
+                <checks>IllegalType</checks>
+                <query>//VARIABLE_DEF[MODIFIERS/FINAL]</query>
+            </suppress-xpath>
+            <!-- final 키워드가 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
+            <suppress-xpath>
+                <checks>IllegalType</checks>
+                <query>//PARAMETER_DEF[MODIFIERS/FINAL]</query>
+            </suppress-xpath>
         </module>
     </module>
 </module>
