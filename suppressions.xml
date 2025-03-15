@@ -5,10 +5,7 @@
     <!-- src/test 디렉토리에서는 _ 검출 제외 -->
     <suppress checks="[^_]+" files=".*src/test/.*" />
 
-    <suppress checks="IllegalType" files="^(?!.*/entity/).*" />
-<!--    <suppress-xpath-->
-<!--            checks="IllegalType"-->
-<!--            query="//CLASS_DEF[not(./ANNOTATION[./IDENT[@text='Table']])]"-->
-<!--    />-->
+    <!-- entity 디렉토리를 제외한 모든 곳에서 IllegalType 검사 제외 -->
+    <suppress checks="IllegalType" files="^(?!.*\/entity\/).*" />
 
 </suppressions>
