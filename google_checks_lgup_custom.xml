@@ -55,9 +55,9 @@
             <!-- final 키워드가 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
             <property name="query"
                       value="//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]
-                         | //PARAMETER_DEF[preceding-sibling::ANNOTATION[@text='Id']]
-                         | //VARIABLE_DEF[MODIFIERS/FINAL]
-                         | //PARAMETER_DEF[MODIFIERS/FINAL]" />
+                         or //PARAMETER_DEF[preceding-sibling::ANNOTATION[@text='Id']]
+                         or //VARIABLE_DEF[MODIFIERS/FINAL]
+                         or //PARAMETER_DEF[MODIFIERS/FINAL]" />
         </module>
         <module name="OuterTypeFilename"/>
         <module name="IllegalTokenText">
