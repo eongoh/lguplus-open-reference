@@ -53,11 +53,11 @@
             <!-- @Id 어노테이션이 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
             <!-- final 키워드가 붙은 필드(멤버 변수)의 IllegalType 검사 제외 -->
             <!-- final 키워드가 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
-            <property name="query"
-                      value="//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]
-                         or //PARAMETER_DEF[preceding-sibling::ANNOTATION[@text='Id']]
-                         or //VARIABLE_DEF[MODIFIERS/FINAL]
-                         or //PARAMETER_DEF[MODIFIERS/FINAL]" />
+<!--            <property name="query"-->
+<!--                      value="//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]-->
+<!--                         or //PARAMETER_DEF[preceding-sibling::ANNOTATION[@text='Id']]-->
+<!--                         or //VARIABLE_DEF[MODIFIERS/FINAL]-->
+<!--                         or //PARAMETER_DEF[MODIFIERS/FINAL]" />-->
         </module>
         <module name="OuterTypeFilename"/>
         <module name="IllegalTokenText">
