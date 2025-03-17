@@ -6,10 +6,6 @@
     <suppress checks="[^_]+" files=".*src/test/.*" />
 
     <!-- entity 디렉토리를 제외한 모든 곳에서 IllegalType 검사 제외 -->
-    <suppress checks="IllegalType" files="^(?!.*\/entity\/).*" />
-    <!-- @Id가 붙은 필드 검사 제외 -->
-<!--    <suppress checks="IllegalType" xpath="//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]" />-->
-    <!-- final 키워드가 붙은 필드 검사 제외 -->
-<!--    <suppress checks="IllegalType" xpath="//VARIABLE_DEF[MODIFIERS/FINAL]" />-->
+<!--    <suppress checks="IllegalType" files="^(?!.*\/entity\/).*" />-->
 
 </suppressions>

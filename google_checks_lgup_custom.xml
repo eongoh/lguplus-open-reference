@@ -49,15 +49,15 @@
     <module name="TreeWalker">
         <module name="IllegalType">
             <property name="illegalClassNames" value="int, double, float, boolean, char, byte, short, long"/>
-            <!-- @Id 어노테이션이 붙은 필드(멤버 변수)의 IllegalType 검사 제외 -->
-            <!-- @Id 어노테이션이 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
-            <!-- final 키워드가 붙은 필드(멤버 변수)의 IllegalType 검사 제외 -->
-            <!-- final 키워드가 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
-<!--            <property name="query"-->
-<!--                      value="//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]-->
-<!--                         or //PARAMETER_DEF[preceding-sibling::ANNOTATION[@text='Id']]-->
-<!--                         or //VARIABLE_DEF[MODIFIERS/FINAL]-->
-<!--                         or //PARAMETER_DEF[MODIFIERS/FINAL]" />-->
+            <property name="fileExtensions" value="java"/>
+            <property name="query"
+                      value="//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]
+                         or //PARAMETER_DEF[preceding-sibling::ANNOTATION[@text='Id']]
+                         or //VARIABLE_DEF[MODIFIERS/FINAL]
+                         or //PARAMETER_DEF[MODIFIERS/FINAL]" />
+            <module name="FileMatchFilter">
+                <property name="matchExpression" value=".*/entity/.*\.java"/>
+            </module>
         </module>
         <module name="OuterTypeFilename"/>
         <module name="IllegalTokenText">
