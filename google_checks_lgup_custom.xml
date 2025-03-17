@@ -49,6 +49,14 @@
     <module name="TreeWalker">
         <module name="IllegalType">
             <property name="illegalClassNames" value="int, double, float, boolean, char, byte, short, long"/>
+            <!-- @Id 어노테이션이 붙은 필드(멤버 변수)의 IllegalType 검사 제외 -->
+            <property name="query" value="//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]" />
+            <!-- @Id 어노테이션이 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
+            <property name="query" value="//PARAMETER_DEF[preceding-sibling::ANNOTATION[@text='Id']]" />
+            <!-- final 키워드가 붙은 필드(멤버 변수)의 IllegalType 검사 제외 -->
+            <property name="query" value="//VARIABLE_DEF[MODIFIERS/FINAL]" />
+            <!-- final 키워드가 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
+            <property name="query" value="//PARAMETER_DEF[MODIFIERS/FINAL]" />
         </module>
         <module name="OuterTypeFilename"/>
         <module name="IllegalTokenText">
@@ -328,14 +336,6 @@
             <property name="file" value="${org.checkstyle.google.suppressionxpathfilter.config}"
                       default="checkstyle-xpath-suppressions.xml"/>
             <property name="optional" value="true"/>
-            <!-- @Id 어노테이션이 붙은 필드(멤버 변수)의 IllegalType 검사 제외 -->
-            <property check="IllegalType" query="//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]" />
-            <!-- @Id 어노테이션이 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
-            <property check="IllegalType" query="//PARAMETER_DEF[preceding-sibling::ANNOTATION[@text='Id']]" />
-            <!-- final 키워드가 붙은 필드(멤버 변수)의 IllegalType 검사 제외 -->
-            <property check="IllegalType" query="//VARIABLE_DEF[MODIFIERS/FINAL]" />
-            <!-- final 키워드가 붙은 메서드 파라미터의 IllegalType 검사 제외 -->
-            <property check="IllegalType" query="//PARAMETER_DEF[MODIFIERS/FINAL]" />
         </module>
     </module>
 </module>
