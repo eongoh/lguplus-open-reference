@@ -10,6 +10,6 @@
     <!-- @Id가 붙은 필드 검사 제외 -->
 <!--    <suppress checks="IllegalType" xpath="//VARIABLE_DEF[preceding-sibling::ANNOTATION[@text='Id']]" />-->
     <!-- final 키워드가 붙은 필드 검사 제외 -->
-    <suppress checks="IllegalType" xpath="//VARIABLE_DEF[MODIFIERS/FINAL]" />
+<!--    <suppress checks="IllegalType" xpath="//VARIABLE_DEF[MODIFIERS/FINAL]" />-->
 
 </suppressions>
